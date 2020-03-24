@@ -18,7 +18,8 @@
           <h1 class="display-4 logo">Barterbook</h1>
           <p class="lead">Teach. Learn. Share.</p>
           <hr class="my-4">
-          <form name="signIn" method="GET" onsubmit="return OnSubmitForm();">
+          <form name="signIn" method="GET" action="/index.html">
+          <p class="display-5">Welcome to Barterbook. Create your profile...</p>
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -39,19 +40,5 @@
   <footer>
   </footer>
 </body>
-  <script type="text/javascript">
-    function OnSubmitForm()
-    {
-      if(document.signIn.newUserCheck.checked == true)
-      {
-        document.signIn.action ="/newUser.html";
-      }
-      else
-      if(document.signIn.newUserCheck.checked == false)
-      {
-        document.signIn.action ="/index.html";
-      }
-      return true;
-    }
-  </script>
+
 </html>
