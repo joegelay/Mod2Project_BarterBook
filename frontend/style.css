@@ -1,0 +1,11 @@
+#cards-div {
+    padding: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-img {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
