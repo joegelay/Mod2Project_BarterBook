@@ -15,6 +15,13 @@ class UsersController < ApplicationController
         redirect_to "http://localhost:3000/index.html"
     end 
 
+    def update 
+        @user = User.find_by(id: params[:id])
+
+        user.update name: params[:name], email: params[:email], password: params[:password], zip: params[:zip], bio: params[:bio], image_url: params[:image_url]
+        redirect_to "http://localhost:3000/index.html"
+    end 
+
     def destroy
         @user = User.find_by(id: params[:id])
         @user.destroy
@@ -22,5 +29,5 @@ class UsersController < ApplicationController
         redirect_to "http://localhost:3000/index.html"
     end 
 
-    
+
 end
