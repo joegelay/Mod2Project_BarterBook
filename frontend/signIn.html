@@ -18,7 +18,7 @@
           <h1 class="display-4 logo">Barterbook</h1>
           <p class="lead">Teach. Learn. Share.</p>
           <hr class="my-4">
-          <form method="GET" action="/index.html">
+          <form name="signIn" method="GET" onsubmit="return OnSubmitForm();">
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -30,7 +30,7 @@
             </div>
             <div class="form-group form-check">
               <input type="checkbox" class="form-check-input" id="newUserCheck">
-              <label class="form-check-label" for="newUserCheck">First time? Check here!</label>
+              <label name="newUserCheck" class="form-check-label" for="newUserCheck">First time? Check here!</label>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
@@ -38,6 +38,20 @@
   </main>
   <footer>
   </footer>
-
 </body>
+  <script type="text/javascript">
+    function OnSubmitForm()
+    {
+      if(document.signIn.newUserCheck.checked == true)
+      {
+        document.signIn.action ="/landingPage.html";
+      }
+      else
+      if(document.signIn.newUserCheck.checked == false)
+      {
+        document.signIn.action ="/index.html";
+      }
+      return true;
+    }
+  </script>
 </html>
