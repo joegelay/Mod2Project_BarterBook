@@ -18,7 +18,7 @@
           <h1 class="display-4 logo">Barterbook</h1>
           <p class="lead">Teach. Learn. Share.</p>
           <hr class="my-4">
-          <form name="signIn" method="GET" onsubmit="return OnSubmitForm();">
+          <form name="signIn" onsubmit="return OnSubmitForm();">
             <div class="form-group">
               <label for="email">Email address</label>
               <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
@@ -45,12 +45,14 @@
     {
       if(document.signIn.newUserCheck.checked == true)
       {
-        document.signIn.action ="/myProfile.html";
+        document.signIn.method = "POST"
+        document.signIn.action = "http://localhost:4000/users";
       }
       else
       if(document.signIn.newUserCheck.checked == false)
       {
-        document.signIn.action ="/index.html";
+        document.signIn.method = "GET";
+        document.signIn.action = "/index.html";
       }
       return true;
     }
