@@ -1,0 +1,28 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+}
+
+.background {
+    color: white;
+    left: auto;
+    right: auto;
+    height: 100vh;
+    background-image: linear-gradient(
+        to right, 
+        #3700ff7a, 
+        #58b3e775), 
+        url("https://ed.stanford.edu/sites/default/files/news_images/scott-gettyimages-523031716-credit-izusek.jpg");
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.blurb {
+    max-width: 60vh;
+    text-shadow: 0 1px 0 black;
+}
+
