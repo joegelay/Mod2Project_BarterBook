@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
     def index 
         @users = User.all 
         render json: @users, include: :skills
@@ -28,4 +29,5 @@ class UsersController < ApplicationController
 
         redirect_to "http://localhost:3000/index.html"
     end 
+    
 end
