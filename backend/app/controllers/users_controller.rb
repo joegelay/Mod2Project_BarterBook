@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     end 
 
     def destroy
-        @user = User.find_by(email: params[:email])
+        @user = User.find_by(id: params[:id])
         @user.destroy
 
         redirect_to "http://localhost:3000/index.html"
