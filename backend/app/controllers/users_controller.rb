@@ -28,6 +28,4 @@ class UsersController < ApplicationController
 
         redirect_to "http://localhost:3000/index.html"
     end 
-
-
 end
