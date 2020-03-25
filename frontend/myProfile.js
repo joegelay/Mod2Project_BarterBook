@@ -9,7 +9,7 @@ function renderUserName(user) {
     const userCard = document.getElementById("user-card")
 
     const name = document.createElement('h1')
-    name.innerText = user.name 
+    name.innerText = user.name === null ? "John Doe" : user.name;
 
     userCard.appendChild(name);
     renderUserImage(user);
@@ -19,11 +19,12 @@ function renderUserImage(user) {
     const userCard = document.getElementById("user-card")
 
     const image = document.createElement('img')
-    image.src =  `${user.image_url}`
+    image.src =  user.image_url === null ? "https://i0.wp.com/mastersbp.com/wp-content/uploads/2016/08/dummy-prod-1.jpg" : `${user.image_url}`;
     image.alt = "user profile picture"
 
     const imageForm = document.createElement('div')
     imageForm.className = "custom-file"
+
     imageForm.innerHTML = `
         <input type="file" class="custom-file-input" id="validatedCustomFile" required>
         <label class="custom-file-label" for="validatedCustomFile">Change profile picture...</label>
@@ -39,10 +40,12 @@ function renderUserBio(user) {
     const userCard = document.getElementById("user-card")
 
     const bio = document.createElement('div')
+    const bioText = user.bio === null ? "Enter bio here" : user.bio;
+
     bio.className = "bio"
     bio.innerHTML = `
         <h3>Bio:</h3>
-        <input type="text" class="form-control" id="" placeholder="${user.bio}">
+        <input type="text" class="form-control" id="" placeholder="${bioText}">
     `
     userCard.appendChild(bio);
 
@@ -121,13 +124,24 @@ function renderListItems(user) {
     });
 
     const addSkill = document.createElement('li')
-          addSkill.innerHTML = `<input type="text" class="form-control" id="" placeholder="Add skill...">`
-
-          skillList.appendChild(addSkill);
+    
+    addSkill.innerHTML = `
+    <form method="POST" action="http://localhost:4000/skills">
+        <input type="text" class="form-control" id="addSkillsInput" placeholder="Add skill..." name="name">
+        <input type="hidden" name="user_id" value="${user.id}">
+        <input type="hidden" name="has_skill" value="true">
+    </form>`
+    skillList.appendChild(addSkill);
+    
+    const input = document.getElementById("addSkillsInput");
 
     const addDesiredSkill = document.createElement('li')
-          addDesiredSkill.innerHTML = `<input type="text" class="form-control" id="" placeholder="Add desired skill...">`
-
+          addDesiredSkill.innerHTML = `
+          <form method="POST" action="http://localhost:4000/skills">
+            <input type="text" class="form-control" id="addDesiredSkillsInput" placeholder="Add desired skill..." name="name">
+              <input type="hidden" name="user_id" value="${user.id}">
+              <input type="hidden" name="has_skill" value="false">
+          </form>`
           desiredSkillList.appendChild(addDesiredSkill);
 
     renderDeleteProfile(user)
