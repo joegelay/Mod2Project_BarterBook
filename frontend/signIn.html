@@ -43,14 +43,10 @@
   <script type="text/javascript">
     function OnSubmitForm()
     {
-      if(document.signIn.newUserCheck.checked == true)
-      {
+      if (document.signIn.newUserCheck.checked) {
         document.signIn.method = "POST"
         document.signIn.action = "http://localhost:4000/users";
-      }
-      else
-      if(document.signIn.newUserCheck.checked == false)
-      {
+      } else {
         document.signIn.method = "GET";
         document.signIn.action = "/index.html";
       }
