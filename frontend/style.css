@@ -86,4 +86,11 @@ ul .skill-list-item::before {
 
 .select-parameters {
   margin-right: 1rem;
+  background-color: #6c757d !important;
+  color: white !important;
+  border-color: #6c757d !important;
+}
+
+.search-bar {
+  width: 20rem !important;
 }
