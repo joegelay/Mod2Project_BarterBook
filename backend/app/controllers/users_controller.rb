@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find_by(email: params[:email])
-        render json: @user, include: :skills 
+        render json: @user, include: [:skills, :user_skills]
     end 
 
     def create 
