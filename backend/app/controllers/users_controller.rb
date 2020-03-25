@@ -5,9 +5,17 @@ class UsersController < ApplicationController
             if params[:parameterSelect] == "name"
                 @users = User.where(["name LIKE ?", "%#{params[:search]}%"])
             elsif params[:parameterSelect] == "skill"
-                skill_ids_to_use = Skill.all.where(["name LIKE ?", "%#{params[:search]}%"])#.map {|skill| skill.id}
-                @users = skill_ids_to_use.UsersSkills.users
-                # @users = User.where(["skill_id = ?", skill_ids_to_use[0]])
+                user_skills = Skill.all.where(["name LIKE ?", "%#{params[:search]}%"]).map {|skill| skill.user_skills}.flatten
+                use_users = user_skills.select {|user_skill| user_skill.has_skill}
+                users_ids = use_users.map {|use_user| use_user.user_id}
+                @users = User.where(["id IN (?)", users_ids])
+            elsif params[:parameterSelect] == "desiredSkill"
+                user_skills = Skill.all.where(["name LIKE ?", "%#{params[:search]}%"]).map {|skill| skill.user_skills}.flatten
+                use_users = user_skills.select {|user_skill| !user_skill.has_skill}
+                users_ids = use_users.map {|use_user| use_user.user_id}
+                @users = User.where(["id IN (?)", users_ids])
+            else  
+                @users = User.all 
             end
         else 
             @users = User.all 
