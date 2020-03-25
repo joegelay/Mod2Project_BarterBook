@@ -1,0 +1,41 @@
+  header {
+    background-color: #3700ff7a;
+}
+
+main {
+    background-color: #58b3e775;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.skill-lists {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+.delete {
+    background: red;
+    color: white;
+    font-size: .75rem;
+    border-radius: 10rem; 
+}
+
+.add-skill {
+    border-radius: 10rem; 
+}
+
