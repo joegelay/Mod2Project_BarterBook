@@ -94,10 +94,12 @@ function renderListItems(user) {
     const desiredSkillList = document.getElementById("desired-skill-list-ul")
     
     user.skills.forEach(skill => {
-        const skillElement = document.createElement('li');
+        const skillLi = document.createElement('li')
+        const skillElement = document.createElement('span');
+        
 
         skillElement.className = 'skill-list-item';
-        skillElement.innerText = skill.name;
+        skillElement.innerHTML = `${skill.name} <input id=${skill.id} type="button" value="Delete" class="delete">`;
         
         let hasSkill = false;
 
@@ -110,65 +112,31 @@ function renderListItems(user) {
         }
 
         if (hasSkill) {
-            skillList.appendChild(skillElement);
+            skillList.appendChild(skillLi)
+            skillLi.appendChild(skillElement);
         } else {
-            desiredSkillList.appendChild(skillElement);
+            desiredSkillList.appendChild(skillLi);
+            skillLi.appendChild(skillElement);
         }
     });
+
+    const addSkill = document.createElement('li')
+          addSkill.innerHTML = `<input type="text" class="form-control" id="" placeholder="Add skill...">`
+
+          skillList.appendChild(addSkill);
+
+    const addDesiredSkill = document.createElement('li')
+          addDesiredSkill.innerHTML = `<input type="text" class="form-control" id="" placeholder="Add desired skill...">`
+
+          desiredSkillList.appendChild(addDesiredSkill);
+
+    renderDeleteProfile(user)
 }
 
+function renderDeleteProfile(user) {
+    const userCard = document.getElementById("user-card")
+    const deleteProfileButton = document.createElement('div')
+    deleteProfileButton.innerHTML = `<input id=${user.id} type="button" value="Delete Profile" class="delete delete-profile"></input>`
 
-
-//             <div class="skill-lists">
-//                 <div class="skills">
-//                     <h4>Skills:</h4>
-//                     <ul>
-//                         <li>
-//                             <span>
-//                                 Spanish
-//                                 <input id=${user_skill.id} type="button" value="Delete" class="delete">
-//                             </span>
-//                         </li>
-//                         <li>
-//                             <span>
-//                                 Chess
-//                                 <input id=${user_skill.id} type="button" value="Delete" class="delete">
-//                             </span>
-//                         <li>
-//                             <span>
-//                                 Coding
-//                                 <input id=${user_skill.id} type="button" value="Delete" class="delete">
-//                             </span>
-//                         </li>
-//                         <br>
-//                         <li>
-//                             <input type="text" class="form-control" id=""" placeholder="Add skill...">
-//                         </li>
-//                     </ul>
-//                 </div>
-
-//                <div class="desired-skills">
-//                     <h4>Desired Skills:</h4>
-//                     <ul >
-//                         <li>
-//                             <span>
-//                                 Piano
-//                                 <input id=${user_skill.id} type="button" value="Delete" class="delete">
-//                             </span>
-//                         </li>
-//                         <li>
-//                             <span>
-//                                 Bike Maintenance
-//                                 <input id=${user_skill.id} type="button" value="Delete" class="delete">
-//                             </span>
-//                         </li>
-//                         <br>
-//                         <li>
-//                             <input type="text" class="form-control" id="" placeholder="Add desired skill...">
-//                         </li>
-//                     </ul>
-//                </div>
-//             </div>
-
-
-//             <input id=${user.id} type="button" value="Delete Profile" class="delete delete-profile"></input>
+    userCard.appendChild(deleteProfileButton)
+}         
