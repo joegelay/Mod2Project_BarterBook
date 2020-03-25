@@ -81,9 +81,9 @@ ul .skill-list-item::before {
 }
 
 .find-a-match-button {
-  padding-left: 1rem;
+  margin-left: 1rem;
 }
 
-.search-dropdown {
-  padding-right: 1rem;
+.select-parameters {
+  margin-right: 1rem;
 }
