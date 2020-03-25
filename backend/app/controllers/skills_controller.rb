@@ -10,8 +10,11 @@ class SkillsController < ApplicationController
     end 
 
     def create 
-        Skill.create name: params[:name]
+        new_skill = Skill.create name: params[:name]
+        user = User.find_by(id: params[:user_id])
 
-        redirect_to "http://localhost:3000/index.html"
+        UserSkill.create user: user, skill: new_skill, has_skill: params[:has_skill]
+
+        redirect_to "http://localhost:3000/myprofile.html?email=#{user.email}"
     end 
 end
