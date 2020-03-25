@@ -27,8 +27,8 @@ header {
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
-  width: 15rem;
-  height: 15rem;
+  width: 20rem;
+  height: 20rem;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -54,6 +54,10 @@ header {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  overflow: hidden;
+  padding-top: 1rem;
+  border: 5pt solid black;
+  border-radius: 10%;
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -67,4 +71,20 @@ header {
   background-color: #3700ff7a;
   color: black;
   transform: rotateY(180deg);
+}
+
+ul .skill-list-item::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: black; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.email-link {
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  color: black;
 }
