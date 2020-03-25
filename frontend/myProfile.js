@@ -6,6 +6,9 @@ fetch(`http://localhost:4000/users/user?email=${email}`)
     .then(user => renderUser(user))
 
 function renderUser(user) {
+
+    console.log(user)
+    
     const body = document.querySelector('body')
 
     const name = document.createElement('p')
