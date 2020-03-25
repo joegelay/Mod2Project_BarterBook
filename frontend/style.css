@@ -24,15 +24,13 @@ header {
   background-color: #3700ff7a;
 }
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
   width: 20rem;
   height: 20rem;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -42,12 +40,10 @@ header {
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -60,13 +56,11 @@ header {
   border-radius: 10%;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background-color: #3700ff7a;
   color: black;
 }
 
-/* Style the back side */
 .flip-card-back {
   background-color: #3700ff7a;
   color: black;
@@ -74,12 +68,12 @@ header {
 }
 
 ul .skill-list-item::before {
-  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: black; /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
+  content: "\2022";
+  color: black; 
+  font-weight: bold; 
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 
 .email-link {

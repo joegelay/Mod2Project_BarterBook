@@ -15,6 +15,10 @@ showUsers = users => {
             return;
         }
 
+        console.log(user.user_skills)
+        // separate user skills and desired skills
+        // dropdown by search
+
         const userElement = document.createElement('div');
         const skillsElement = document.createElement('ul');
 
@@ -52,8 +56,3 @@ showUsers = users => {
         userEleAdded.append(skillsElement);
     });
 }
-
-/*
-<div class="card h-100" style="width: 18rem;"><img src="${user.image_url}" class="card-img-top card-img" alt="user picture"><div class="card-body">
-        <h5 class="card-title">${user.name}</h5><p class="card-text">${user.bio}</p><a href="#" class="btn btn-primary">Learn More</a></div></div>`
-        */

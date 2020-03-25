@@ -7,7 +7,7 @@ class UsersController < ApplicationController
             @users = User.all 
         end
 
-        render json: @users, include: :skills
+        render json: @users, include: [:skills, :user_skills]
     end 
 
     def show
