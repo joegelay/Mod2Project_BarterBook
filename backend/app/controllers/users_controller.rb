@@ -2,7 +2,13 @@ class UsersController < ApplicationController
 
     def index 
         if params[:search]
-            @users = User.where(["name LIKE ?", "%#{params[:search]}%"])
+            if params[:parameterSelect] == "name"
+                @users = User.where(["name LIKE ?", "%#{params[:search]}%"])
+            elsif params[:parameterSelect] == "skill"
+                skill_ids_to_use = Skill.all.where(["name LIKE ?", "%#{params[:search]}%"])#.map {|skill| skill.id}
+                @users = skill_ids_to_use.UsersSkills.users
+                # @users = User.where(["skill_id = ?", skill_ids_to_use[0]])
+            end
         else 
             @users = User.all 
         end

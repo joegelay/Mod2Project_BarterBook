@@ -1,6 +1,7 @@
 const searchParams = new URLSearchParams(window.location.search);
 const userSearch = searchParams.get('search');
-const userUrl = userSearch === null ? 'http://localhost:4000/users' : `http://localhost:4000/users?search=${userSearch}`;
+const searchParameter = searchParams.get('parameterSelect');
+const userUrl = userSearch === null ? 'http://localhost:4000/users' : `http://localhost:4000/users?search=${userSearch}&parameterSelect=${searchParameter}`;
 const currentEmail = decodeURI(searchParams.get('email'));
 
 fetch(userUrl)

@@ -26,14 +26,14 @@
                   <a class="nav-link" href="/myProfile.html">My Profile</a>
                 </li>
               </ul>
-              <form name='searchBar' class="form-inline" method='GET' action='http://localhost:3000' onsubmit='return onSubmitForm();'>
+              <form name='searchBar' class="form-inline" method='GET' action='http://localhost:3000'>
                 <select name='parameterSelect' class='custom-select select-parameters' onchange='onSelectParameter();'>
                   <option selected>Select a Search Parameter</option>
                   <option value='name'>Name</option>
                   <option value='skill'>Skill</option>
                   <option value='desiredSkill'>Desired Skill</option>
                 </select>
-                <input class="form-control" type="search" placeholder='Select a Parameter' name='searchBarInput' aria-label="Search" name='search'>
+                <input class="form-control" type="search" placeholder='Select a Parameter' name='search' aria-label="Search" name='search'>
                 <div class='find-a-match-button'>
                 <button class="btn btn-secondary" type="submit">Find a Match</button>
               </div>
@@ -47,11 +47,7 @@
     </main>
     <footer>
     </footer>
-    <script type='text/javascript'>
-      function onSubmitForm() {
-        
-      }
-      
+    <script type='text/javascript'>      
       function onSelectParameter() {
         let searchBarText;
         switch (document.searchBar.parameterSelect.value) {
@@ -69,7 +65,7 @@
             break;
         }
 
-        document.searchBar.searchBarInput.placeholder = searchBarText;
+        document.searchBar.search.placeholder = searchBarText;
       }
     </script>
     <script src='index.js'></script>
