@@ -6,23 +6,23 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="myProfile.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>BarterBook</title>
+    <title>Barterbook</title>
 </head>
 <body>
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/index.html">BarterBook</a>
+            <a class="navbar-brand" href="/index.html">Barterbook</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="/index.html">Home</a>
+                  <a class="nav-link" href="" id="home-nav">Home</a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="/myProfile.html">My Profile <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="">My Profile <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
             </div>
@@ -30,67 +30,8 @@
     </header>
 
     <main>
-        <div class="user-card">
-            <h1>Joe Gelay</h1>
-            <img src="https://assets3.thrillist.com/v1/image/2547068/size/tmg-article_tall;jpeg_quality=20.jpg" alt="users profile picture">
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                <label class="custom-file-label" for="validatedCustomFile">Change profile picture...</label>
-              </div>
-            <div class="bio">
-                <h3>Bio:   </h2>
-                <input type="text" class="form-control" id="" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis omnis maxime, ullam dolore corporis magn. ">
-            </div>
-            <div class="skill-lists">
-                <div class="skills">
-                    <h4>Skills:</h4>
-                    <ul>
-                        <li>
-                            <span>
-                                Spanish
-                                <input id=${user_skill.id} type="button" value="Delete" class="delete">
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                Chess
-                                <input id=${user_skill.id} type="button" value="Delete" class="delete">
-                            </span>
-                        <li>
-                            <span>
-                                Coding
-                                <input id=${user_skill.id} type="button" value="Delete" class="delete">
-                            </span>
-                        </li>
-                        <br>
-                        <li>
-                            <input type="text" class="form-control" id=""" placeholder="Add skill...">
-                        </li>
-                    </ul>
-                </div>
-               <div class="desired-skills">
-                    <h4>Desired Skills:</h4>
-                    <ul >
-                        <li>
-                            <span>
-                                Piano
-                                <input id=${user_skill.id} type="button" value="Delete" class="delete">
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                Bike Maintenance
-                                <input id=${user_skill.id} type="button" value="Delete" class="delete">
-                            </span>
-                        </li>
-                        <br>
-                        <li>
-                            <input type="text" class="form-control" id="" placeholder="Add desired skill...">
-                        </li>
-                    </ul>
-               </div>
-            </div>
-            <input id=${user.id} type="button" value="Delete Profile" class="delete delete-profile">
+        <div id="user-card">
+           
         </div>
     </main>
 
