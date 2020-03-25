@@ -1,6 +1,7 @@
 const searchParams = new URLSearchParams(window.location.search);
 const userSearch = searchParams.get('search');
 const userUrl = userSearch === null ? 'http://localhost:4000/users' : `http://localhost:4000/users?search=${userSearch}`;
+const currentEmail = decodeURI(searchParams.get('email'));
 
 fetch(userUrl)
     .then(response => response.json())
@@ -10,6 +11,10 @@ showUsers = users => {
     const usersDiv = document.querySelector('#cards-div');
 
     users.forEach(user => {
+        if (user.email === currentEmail) {
+            return;
+        }
+
         const userElement = document.createElement('div');
         const skillsElement = document.createElement('ul');
 
