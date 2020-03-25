@@ -77,8 +77,13 @@ ul .skill-list-item::before {
 }
 
 .email-link {
-  position: absolute;
-  bottom: 0;
-  left: 1rem;
   color: black;
+}
+
+.find-a-match-button {
+  margin-left: 1rem;
+}
+
+.select-parameters {
+  margin-right: 1rem;
 }
