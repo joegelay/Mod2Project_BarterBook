@@ -100,9 +100,15 @@ function renderListItems(user) {
         const skillLi = document.createElement('li')
         const skillElement = document.createElement('span');
         
-
         skillElement.className = 'skill-list-item';
-        skillElement.innerHTML = `${skill.name} <input id=${skill.id} type="button" value="Delete" class="delete">`;
+        skillElement.innerHTML = `${skill.name} 
+        <form method="POST" action="http://localhost:4000/skills/${skill.id}">
+            <input name="_method" type="hidden" value="delete"> 
+            <input name="user_id" type="hidden" value="${user.id}">
+            <input name="skill_id" type="hidden" value="${skill.id}">
+            <input class="delete" type="submit" value="Delete">
+            </form>`;
+            
         
         let hasSkill = false;
 
