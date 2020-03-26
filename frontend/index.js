@@ -52,6 +52,7 @@ showUsers = users => {
                 <div class="flip-card-front">
                     <h5 class="card-title">${user.name}</h5>
                     <img src="${user.image_url}" alt="User Profile Picture" class="card-img-top card-img">
+                    <p class="card-text">${user.bio}</p>
                 </div>
                 <div class="flip-card-back">
                     <h5 class="card-title">${user.name}</h5>
