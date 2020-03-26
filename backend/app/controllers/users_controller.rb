@@ -48,7 +48,7 @@ class UsersController < ApplicationController
         @user = User.find_by(id: params[:id])
         @user.destroy
 
-        redirect_to "http://localhost:3000/landingPage.html"
+        redirect_to "http://localhost:3000/landingPage.html?reason=deleted_profile"
     end 
     
 end
