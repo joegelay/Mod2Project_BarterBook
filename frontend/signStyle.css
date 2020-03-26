@@ -24,3 +24,7 @@ body {
 form {
     max-width: 60vh;
 }
+
+#newUserCheck {
+    margin-left: -188px;
+}
