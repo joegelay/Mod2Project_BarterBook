@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-
-  delete '/skills/:id/?_method=delete', to: 'skills#destroy', as:'skill'
-
   resources :user_skills
   resources :skills
   resources :users
