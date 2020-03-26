@@ -20,7 +20,9 @@ showUsers = users => {
 
         const userElement = document.createElement('div');
         const skillsElement = document.createElement('ul');
+        skillsElement.className = "ul-skill-list"
         const desiredSkillsElement = document.createElement('ul');
+        desiredSkillsElement.className = "ul-skill-list"
 
         user.skills.forEach(skill => {
             const skillElement = document.createElement('li');
@@ -57,11 +59,12 @@ showUsers = users => {
                 <div class="flip-card-back">
                     <h5 class="card-title">${user.name}</h5>
                     <p class="card-text">${user.bio}</p>
-                    <h6 class="card-text">Skills:</h6>
-                    <div id='skills-list-${user.id}'></div>
-                    <h6 class="card-text">Desired Skills:</h6>
+                    <h6 class="card-text bold-card-text">Skills:</h6>
+                    <div class ="back-skill-list" id='skills-list-${user.id}'>
+                    </div>
+                    <h6 class="card-text bold-card-text">Desired Skills:</h6>
                     <div id='desired-skills-list-${user.id}'></div>
-                    <hr>
+                
                     <a class="email-link" href="mailto:${user.email}" target="_blank" rel="noopener noreferrer"><i class="fa fa-envelope"></i> Email</a>
                 </div>
             </div>

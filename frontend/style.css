@@ -5,7 +5,6 @@
   flex-wrap: wrap;
 }
 
-
 .user-card {
   padding: 1rem;
 }
@@ -42,19 +41,20 @@ header {
 .flip-card-front, .flip-card-back {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   position: absolute;
   width: 100%;
   height: 100%;
+  max-height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-  overflow: hidden;
+  overflow-y: scroll;
   padding: .5rem;
   border: 5pt solid black;
   border-radius: 10%;
 }
 
 .flip-card-front {
+  justify-content: space-evenly;
   background-color: #3700ff7a;
   color: black;
 }
@@ -69,23 +69,19 @@ header {
   object-fit: contain;
 }
 
+.bold-card-text {
+  font-weight: bold;
+}
 
 .flip-card-back {
   background-color: #3700ff7a;
+  justify-content: space-between;
   color: black;
   transform: rotateY(180deg);
 }
 
-ul .skill-list-item::before {
-  content: "\2022";
-  color: black; 
-  font-weight: bold; 
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-
 .email-link {
+  justify-self: flex-end;
   color: black;
 }
 
