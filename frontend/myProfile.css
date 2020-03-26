@@ -1,13 +1,28 @@
-  header {
+header {
     background-color: #3700ff7a;
 }
 
+body {
+    min-height: 100%;
+}
+  
+html {
+    min-height: 100%;
+    background-color: #58b3e775; 
+}
+
 main {
+    padding-top: 5rem;
     background-color: #58b3e775;
     height: 100vh;
     display: flex;
     justify-content: center;
-  }
+}
+
+img {
+    border-radius: 10%;
+    border: 2pt solid black;
+}
 
 #user-card {
     display: flex;
@@ -18,14 +33,14 @@ main {
 
 .bio {
     display: flex;
-    justify-content: space-evenly;
     width: 80%;
+    padding-bottom: 2rem;
 }
 
 .skill-lists {
     display: flex;
     justify-content: space-evenly;
-    width: 40%;
+    width: 100%;
 }
 
 .delete {
@@ -33,9 +48,51 @@ main {
     color: white;
     font-size: .75rem;
     border-radius: 10rem; 
+    float: right;
 }
 
 .add-skill {
     border-radius: 10rem; 
 }
 
+.custom-file {
+    width: 50%;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.photo-label-input {
+    border: 1pt solid black;
+}
+
+.add-skill-input {
+    border: 1pt solid black;
+}
+
+.textarea-control {
+    height: 10rem;
+    border: 1pt solid black;
+}
+
+.bio-header::before {
+    content: '';
+    display: inline-block;  
+    vertical-align: middle;
+    height: 100%;
+}
+
+.bio-header::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.bio-header {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 1rem;
+}
+
+.form-padding {
+    padding-top: 1rem;
+}
