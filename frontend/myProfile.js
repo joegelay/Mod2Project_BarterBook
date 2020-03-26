@@ -8,11 +8,13 @@ fetch(`http://localhost:4000/users/user?email=${email}`)
 function renderUserName(user) {
     const userCard = document.getElementById("user-card")
 
-    const name = document.createElement('div')
+    const name = document.createElement('div');
     const userName = user.name === null ? "John Doe" : user.name;
 
+    name.className = "name-div";
     name.innerHTML = `
-        <form method="POST" action="http://localhost:4000/users/${user.id}">
+        <h3 class="bio-header">Name:</h3>
+        <form method="POST" action="http://localhost:4000/users/${user.id}" class="center-vertical-form">
             <input name="_method" type="hidden" value="PUT"> 
             <input type="text" class="name-input-box" name="name" value="${userName}">
             <input type="hidden" name="email" value="${user.email}">
@@ -30,14 +32,16 @@ function renderUserImage(user) {
     const userCard = document.getElementById("user-card")
 
     const image = document.createElement('img')
+
+    image.className = "main-photo"
     image.src =  user.image_url === null ? "https://i0.wp.com/mastersbp.com/wp-content/uploads/2016/08/dummy-prod-1.jpg" : `${user.image_url}`;
     image.alt = "user profile picture"
 
     const imageForm = document.createElement('div')
-    imageForm.className = "custom-file"
-
+    
+    imageForm.className = 'picture-upload-input-div';
     imageForm.innerHTML = `
-        <h3 class="bio-header">Update Profile Picture:</h3>
+        <h3>Update Profile Picture:</h3>
         <form method="POST" action="http://localhost:4000/users/${user.id}">
             <input type="text" class="form-control" name="image_url" placeholder="Enter Image URL Here">
             <input name="_method" type="hidden" value="PUT"> 
@@ -64,7 +68,7 @@ function renderUserBio(user) {
     bio.className = "bio"
     bio.innerHTML = `
         <h3 class="bio-header">Bio:</h3>
-        <form method="POST" action="http://localhost:4000/users/${user.id}">
+        <form method="POST" action="http://localhost:4000/users/${user.id}" class="flex-form">
             <input name="_method" type="hidden" value="PUT"> 
             <input type="hidden" name="name" value="${user.name}">
             <input type="hidden" name="email" value="${user.email}">
@@ -72,7 +76,7 @@ function renderUserBio(user) {
             <input type="hidden" name="zip" value="${user.zip}">
             <textarea type="text" class="form-control textarea-control" name="bio">${bioText}</textarea>
             <input type="hidden" name="image_url" value="${user.image_url}">
-            <input type="submit" class="delete" value="Update Bio">
+            <input type="submit" class="btn-primary rounded-input" value="Update Bio">
         </form>`;
 
     userCard.appendChild(bio);
@@ -185,7 +189,7 @@ function renderDeleteProfile(user) {
     deleteProfileButton.innerHTML = `
         <form method="POST" action="http://localhost:4000/users/${user.id}">
             <input name="_method" type="hidden" value="delete"> 
-            <input id=${user.id} type="submit" value="Delete Profile" class="delete delete-profile">
+            <input id=${user.id} type="submit" value="Delete Profile" class="delete delete-profile powerful-delete-btn">
         </form>`;
 
     userCard.appendChild(deleteProfileButton)
