@@ -17,4 +17,17 @@ class SkillsController < ApplicationController
 
         redirect_to "http://localhost:3000/myprofile.html?email=#{user.email}"
     end 
+
+    def destroy
+        @skill = Skill.find_by(id: params[:id])
+
+        user = User.find_by(id: params[:user_id])
+        user_skill = UserSkill.find_by(user: user, skill: @skill)
+
+        user_skill.destroy
+
+        @skill.destroy
+
+        redirect_to "http://localhost:3000/myprofile.html?email=#{user.email}"
+    end 
 end
