@@ -8,8 +8,19 @@ fetch(`http://localhost:4000/users/user?email=${email}`)
 function renderUserName(user) {
     const userCard = document.getElementById("user-card")
 
-    const name = document.createElement('h1')
-    name.innerText = user.name === null ? "John Doe" : user.name;
+    const name = document.createElement('div')
+    const userName = user.name === null ? "John Doe" : user.name;
+
+    name.innerHTML = `
+        <form method="POST" action="http://localhost:4000/users/${user.id}">
+            <input name="_method" type="hidden" value="PUT"> 
+            <input type="text" class="name-input-box" name="name" value="${userName}">
+            <input type="hidden" name="email" value="${user.email}">
+            <input type="hidden" name="password" value="${user.password}">
+            <input type="hidden" name="zip" value="${user.zip}">
+            <input type="hidden" name="bio" value="${user.bio}">
+            <input type="hidden" name="image_url" value="${user.image_url}">
+        </form>`;
 
     userCard.appendChild(name);
     renderUserImage(user);
@@ -26,8 +37,16 @@ function renderUserImage(user) {
     imageForm.className = "custom-file"
 
     imageForm.innerHTML = `
-        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-        <label class="custom-file-label photo-label-input" for="validatedCustomFile">Change profile picture...</label>
+        <h3 class="bio-header">Update Profile Picture:</h3>
+        <form method="POST" action="http://localhost:4000/users/${user.id}">
+            <input type="text" class="form-control" name="image_url" placeholder="Enter Image URL Here">
+            <input name="_method" type="hidden" value="PUT"> 
+            <input type="hidden" name="name" value="${user.name}">
+            <input type="hidden" name="email" value="${user.email}">
+            <input type="hidden" name="password" value="${user.password}">
+            <input type="hidden" name="zip" value="${user.zip}">
+            <input type="hidden" name="bio" value="${user.bio}">
+        </form>
     `
 
     userCard.appendChild(image);
@@ -45,8 +64,17 @@ function renderUserBio(user) {
     bio.className = "bio"
     bio.innerHTML = `
         <h3 class="bio-header">Bio:</h3>
-        <textarea type="text" class="form-control textarea-control" id="" placeholder="${bioText}">
-    `
+        <form method="POST" action="http://localhost:4000/users/${user.id}">
+            <input name="_method" type="hidden" value="PUT"> 
+            <input type="hidden" name="name" value="${user.name}">
+            <input type="hidden" name="email" value="${user.email}">
+            <input type="hidden" name="password" value="${user.password}">
+            <input type="hidden" name="zip" value="${user.zip}">
+            <textarea type="text" class="form-control textarea-control" name="bio">${bioText}</textarea>
+            <input type="hidden" name="image_url" value="${user.image_url}">
+            <input type="submit" class="delete" value="Update Bio">
+        </form>`;
+
     userCard.appendChild(bio);
 
     renderSkillLists(user);
@@ -102,12 +130,12 @@ function renderListItems(user) {
         
         skillElement.className = 'skill-list-item';
         skillElement.innerHTML = `${skill.name} 
-        <form method="POST" action="http://localhost:4000/skills/${skill.id}">
+        <form class="form-right" method="POST" action="http://localhost:4000/skills/${skill.id}">
             <input name="_method" type="hidden" value="delete"> 
             <input name="user_id" type="hidden" value="${user.id}">
             <input name="skill_id" type="hidden" value="${skill.id}">
             <input class="delete" type="submit" value="Delete">
-            </form>`;
+        </form>`;
             
         
         let hasSkill = false;
@@ -138,8 +166,6 @@ function renderListItems(user) {
         <input type="hidden" name="has_skill" value="true">
     </form>`
     skillList.appendChild(addSkill);
-    
-    const input = document.getElementById("addSkillsInput");
 
     const addDesiredSkill = document.createElement('li')
           addDesiredSkill.innerHTML = `
@@ -156,7 +182,11 @@ function renderListItems(user) {
 function renderDeleteProfile(user) {
     const userCard = document.getElementById("user-card")
     const deleteProfileButton = document.createElement('div')
-    deleteProfileButton.innerHTML = `<input id=${user.id} type="button" value="Delete Profile" class="delete"></input><br /><br /><br />`
+    deleteProfileButton.innerHTML = `
+        <form method="POST" action="http://localhost:4000/users/${user.id}">
+            <input name="_method" type="hidden" value="delete"> 
+            <input id=${user.id} type="submit" value="Delete Profile" class="delete delete-profile">
+        </form>`;
 
     userCard.appendChild(deleteProfileButton)
 }         

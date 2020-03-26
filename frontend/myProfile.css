@@ -63,6 +63,7 @@ img {
 
 .photo-label-input {
     border: 1pt solid black;
+    cursor: pointer;
 }
 
 .add-skill-input {
@@ -95,4 +96,15 @@ img {
 
 .form-padding {
     padding-top: 1rem;
+}
+
+.name-input-box {
+    font-size: 18pt;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.form-right {
+    float: right;
 }

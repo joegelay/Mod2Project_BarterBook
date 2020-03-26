@@ -37,17 +37,18 @@ class UsersController < ApplicationController
     end 
 
     def update 
-        @user = User.find_by(email: params[:email])
+        email = params[:email]
+        @user = User.find_by(email: email)
 
-        user.update name: params[:name], email: params[:email], password: params[:password], zip: params[:zip], bio: params[:bio], image_url: params[:image_url]
-        redirect_to "http://localhost:3000/index.html"
+        @user.update name: params[:name], email: email, password: params[:password], zip: params[:zip], bio: params[:bio], image_url: params[:image_url]
+        redirect_to "http://localhost:3000/myProfile.html?email=#{email}"
     end 
 
     def destroy
         @user = User.find_by(id: params[:id])
         @user.destroy
 
-        redirect_to "http://localhost:3000/index.html"
+        redirect_to "http://localhost:3000/landingPage.html"
     end 
     
 end
