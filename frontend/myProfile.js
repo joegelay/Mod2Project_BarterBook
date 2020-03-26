@@ -13,7 +13,7 @@ function renderUserName(user) {
 
     name.className = "name-div";
     name.innerHTML = `
-        <h3 class="bio-header">Name:</h3>
+        <h3>Name:</h3>
         <form method="POST" action="http://localhost:4000/users/${user.id}" class="center-vertical-form">
             <input name="_method" type="hidden" value="PUT"> 
             <input type="text" class="name-input-box" name="name" value="${userName}">
