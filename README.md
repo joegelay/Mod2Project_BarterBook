@@ -20,10 +20,10 @@ Navigate to the Backend folder and run the following commands in order:<br />
 ### Starting the Frontend and Backend
 
 To start the servers you will need to:<br />
-1.) Backend:
-- Go into the backend folder and run the following command: `rails s -p 4000`<br />
-2.) Frontend:
-- Go into the frontend folder and run the following command: `lite-server`
+- Backend:
+    - Go into the backend folder and run the following command: `rails s -p 4000`<br />
+- Frontend:
+    - Go into the frontend folder and run the following command: `lite-server`
 
 ### Navigating to the Website
 
