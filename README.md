@@ -63,8 +63,8 @@ After you have started running the Frontend and the Backend, then you will navig
 
 ### Authors
 
-* **Jack Perry** - *Initial work* - [PurpleBooth](https://github.com/japerry911)
-* **Jack Perry** - *Initial work* - [PurpleBooth](https://github.com/joegelay)
+* **Jack Perry** - *Initial work* - [Jack Perry's Github](https://github.com/japerry911)
+* **Joe Gelay** - *Initial work* - [Joe Gelay's Github](https://github.com/joegelay)
 
 ### License
 
