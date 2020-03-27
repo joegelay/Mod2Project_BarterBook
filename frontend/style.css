@@ -117,6 +117,7 @@ footer {
   align-items: center;
   bottom: 0;
   width: 100%;
+  position: absolute;
 }
 
 .fa {
@@ -172,4 +173,14 @@ hr {
   width: inherit;
   text-align: center;
   text-decoration: none;
+}
+  
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+  min-height: 100vh;
 }
