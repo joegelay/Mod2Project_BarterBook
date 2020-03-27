@@ -104,3 +104,65 @@ header {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
 }
+
+footer {
+  font-size: small;
+  text-align: center;
+  height: 110px;
+  background-color: #3700ff7a;
+  clear: both;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 8pt;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
+hr {
+    margin: 0;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background-color: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background-color: #55acee;
+  color: white;
+}
+
+.fa-linkedin {
+  background-color: #0077b5;
+  color: white;
+}
+
+.fa-youtube {
+  background-color: #e62117;
+  color: white;
+}
+
+.footer-div-top {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon {
+    margin-bottom: 1rem;
+    border: 1pt solid black;
+}
