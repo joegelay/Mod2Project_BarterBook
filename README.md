@@ -11,7 +11,7 @@ This website is built with JavaScript, Ruby on Rails, HTML, CSS, Bootstrap, and 
 
 ### Before You Start Using
 
-- Navigate to the Backend folder and run the following commands in order:
+Navigate to the Backend folder and run the following commands in order:
     - `bundle-install`
     - `rails db:create`
     - `rails db:migrate`
