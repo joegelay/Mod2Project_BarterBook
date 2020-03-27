@@ -60,6 +60,8 @@ After you have started running the Frontend and the Backend, then you will navig
     - The user can delete their profile as well
         - Redirected to Landing page with a Toast message if the user deletes their profile
 
+## Video Demo
+<iframe width="560" height="315" src="https://www.youtube.com/embed/258CrIi6kJg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Authors
 
