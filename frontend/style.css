@@ -165,3 +165,11 @@ hr {
     margin-bottom: 1rem;
     border: 1pt solid black;
 }
+
+.card-mail-icon {
+  padding: 0px 8px 0px 0px;
+  font-size: inherit;
+  width: inherit;
+  text-align: center;
+  text-decoration: none;
+}

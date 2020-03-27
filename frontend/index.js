@@ -65,7 +65,7 @@ showUsers = users => {
                     <h6 class="card-text bold-card-text">Desired Skills:</h6>
                     <div id='desired-skills-list-${user.id}'></div>
                 
-                    <a class="email-link" href="mailto:${user.email}" target="_blank" rel="noopener noreferrer"><i class="fa fa-envelope"></i> Email</a>
+                    <a class="email-link" href="mailto:${user.email}" target="_blank" rel="noopener noreferrer"><i class="fa fa-envelope card-mail-icon"></i>Email</a>
                 </div>
             </div>
         </div>`;
