@@ -5,13 +5,13 @@
   flex-wrap: wrap;
 }
 
-.user-card {
-  padding: 1rem;
+body {
+  height: 100%;
+  background-color: #58b3e775;
 }
 
-main {
-  background-color: #58b3e775;
-  height: 100%;
+.user-card {
+  padding: 1rem;
 }
 
 header {
