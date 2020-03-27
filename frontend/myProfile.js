@@ -166,7 +166,7 @@ function renderListItems(user) {
     
     addSkill.innerHTML = `
     <form class="form-padding" method="POST" action="http://localhost:4000/skills">
-        <input type="text" class="form-control add-skill-input" id="addSkillsInput" placeholder="Add skill..." name="name">
+        <input type="text" class="form-control-custom add-skill-input" id="addSkillsInput" placeholder="Add skill..." name="name">
         <input type="hidden" name="user_id" value="${user.id}">
         <input type="hidden" name="has_skill" value="true">
     </form>`
@@ -177,7 +177,7 @@ function renderListItems(user) {
 
           addDesiredSkill.innerHTML = `
           <form class="form-padding" method="POST" action="http://localhost:4000/skills">
-            <input type="text" class="form-control add-skill-input" id="addDesiredSkillsInput" placeholder="Add desired skill..." name="name">
+            <input type="text" class="form-control-custom add-skill-input" id="addDesiredSkillsInput" placeholder="Add desired skill..." name="name">
               <input type="hidden" name="user_id" value="${user.id}">
               <input type="hidden" name="has_skill" value="false">
           </form>`
