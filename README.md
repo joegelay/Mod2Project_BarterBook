@@ -11,19 +11,19 @@ This website is built with JavaScript, Ruby on Rails, HTML, CSS, Bootstrap, and 
 
 ### Before You Start Using
 
-Navigate to the Backend folder and run the following commands in order:
-    - `bundle-install`
-    - `rails db:create`
-    - `rails db:migrate`
-    - `rails db:seed`
+Navigate to the Backend folder and run the following commands in order:\n
+- `bundle-install`
+- `rails db:create`
+- `rails db:migrate`
+- `rails db:seed`
 
 ### Starting the Frontend and Backend
 
-To start the servers you will need to:
+To start the servers you will need to:\n
     1.) Backend:
-        - Go into the backend folder and run the following command: `rails s -p 4000`
+- Go into the backend folder and run the following command: `rails s -p 4000`\n
     2.) Frontend:
-        - Go into the frontend folder and run the following command: `lite-server`
+- Go into the frontend folder and run the following command: `lite-server`
 
 ### Navigating to the Website
 
