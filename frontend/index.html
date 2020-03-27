@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#" id='home-nav-link-element' onclick='redirectToHome();'>Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" id="my-profile" href="#" onclick="myProfile();">My Profile</a>
@@ -100,6 +100,17 @@
           {
             document.getElementById("my-profile").href=`/myProfile.html?email=${email}`; 
           }
+      </script>
+
+      <script type="text/javascript">
+        function redirectToHome() {
+          const searchFour = new URLSearchParams(window.location.search);
+          const userEmail2 = searchFour.get('email');
+
+          const homeNavLinkElement = document.getElementById('home-nav-link-element');
+
+          homeNavLinkElement.href = `http://localhost:3000?email=${userEmail2}`;
+        }
       </script>
 
       <script type="text/javascript">
