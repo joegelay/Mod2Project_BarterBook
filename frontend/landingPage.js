@@ -14,7 +14,7 @@ if (reasonParam) {
             </button>
         </div>
         <div class="toast-body">
-            Your profile has been deleted successfully. If you wish to access content again, please create a new profile. Thank you <br /><br/ >- Skylord Perry.
+            Your profile has been deleted successfully. If you wish to access content again, please create a new profile. Thank you. <br /><br/ >- Skylord Perry.
         </div>
     </div>
   `
