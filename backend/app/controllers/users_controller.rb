@@ -31,7 +31,7 @@ class UsersController < ApplicationController
 
     def create 
         email = params[:email]
-        User.create name: params[:name], email: email, password: params[:password], zip: params[:zip], bio: params[:bio], image_url: params[:image_url]
+        User.create name: params[:name], email: email, password: params[:password], zip: params[:zip], bio: params[:bio], image_url: 'https://i0.wp.com/mastersbp.com/wp-content/uploads/2016/08/dummy-prod-1.jpg'
 
         redirect_to "http://localhost:3000/myProfile.html?email=#{email}"
     end 
