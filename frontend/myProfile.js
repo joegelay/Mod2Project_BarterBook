@@ -189,6 +189,9 @@ function renderListItems(user) {
 function renderDeleteProfile(user) {
     const userCard = document.getElementById("user-card")
     const deleteProfileButton = document.createElement('div')
+
+    deleteProfileButton.className = 'delete-profile-div';
+
     deleteProfileButton.innerHTML = `
         <form method="POST" action="http://localhost:4000/users/${user.id}">
             <input name="_method" type="hidden" value="delete"> 

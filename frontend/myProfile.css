@@ -163,3 +163,8 @@ img {
     width: 10rem;
     font-size: 14pt;
 }
+
+.delete-profile-div {
+    display: flex;
+    justify-content: center;
+}
