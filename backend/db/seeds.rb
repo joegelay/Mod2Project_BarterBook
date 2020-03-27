@@ -22,6 +22,10 @@ dog = Skill.create name: "Dog walking"
 code = Skill.create name: "Coding"
 spanish = Skill.create name: "Spanish"
 mechanic = Skill.create name: "Car Mechanic"
+cooking = Skill.create name: "Cooking"
+bikerepair = Skill.create name: "Bike Repair"
+chess = Skill.create name: "Chess"
+gardening = Skill.create name: "Gardening"
 
 UserSkill.create user: joe, skill: spanish, has_skill: true 
 UserSkill.create user: joe, skill: piano, has_skill: false 
