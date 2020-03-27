@@ -1,189 +1,249 @@
 header {
-    background-color: #3700ff7a;
+  background-color: #3700ff7a;
 }
 
 body {
-    min-height: 100%;
+  min-height: 100%;
 }
-  
+
 html {
-    min-height: 100%;
-    background-color: #58b3e775; 
+  min-height: 100%;
+  background-color: #58b3e775;
 }
 
 main {
-    background-color: #58b3e775;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
+  background-color: #58b3e775;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  font-size: small;
+  text-align: center;
+  height: 110px;
+  background-color: #3700ff7a;
+  clear: both;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
-    border-radius: 10%;
-    border: 2pt solid black;
-    margin: 2rem;
-    margin-top: 0;
+  border-radius: 10%;
+  border: 2pt solid black;
+  margin: 2rem;
+  margin-top: 0;
 }
 
 #user-card {
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bio {
-    display: flex;
-    width: 80%;
-    padding-bottom: 2rem;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 80%;
+  padding-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .skill-lists {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  position: relative;
 }
 
-#add-skill-input, #add-desired-skill-input {
-    position: absolute;
-    top: 85%;
-    margin-top: 2rem;
+#add-skill-input,
+#add-desired-skill-input {
+  position: absolute;
+  top: 85%;
+  margin-top: 2rem;
 }
 
 .delete {
-    background: #ff5454;
-    color: white;
-    font-size: .75rem;
-    border-radius: 10rem; 
-    float: right;
+  background: #ff5454;
+  color: white;
+  font-size: 0.75rem;
+  border-radius: 10rem;
+  float: right;
 }
 
 .add-skill {
-    border-radius: 10rem; 
+  border-radius: 10rem;
 }
 
 .custom-file {
-    width: 50%;
+  width: 50%;
 }
 
 .photo-label-input {
-    border: 1pt solid black;
-    cursor: pointer;
+  border: 1pt solid black;
+  cursor: pointer;
 }
 
 .add-skill-input {
-    border: 1pt solid black;
+  border: 1pt solid black;
 }
 
 .textarea-control {
-    height: 10rem;
-    border: 1pt solid black;
+  height: 10rem;
+  border: 1pt solid black;
 }
 
 .bio-header::before {
-    content: '';
-    display: inline-block;  
-    vertical-align: middle;
-    height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
 }
 
 .bio-header::after {
-    content: '';
-    display: inline-block;
-    width: 100%;
+  content: "";
+  display: inline-block;
+  width: 100%;
 }
 
 .bio-header {
-    display: inline-block;
-    vertical-align: middle;
-    padding-right: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 1rem;
 }
 
 .form-padding {
-    padding-top: 1rem;
+  padding-top: 1rem;
 }
 
 .name-input-box {
-    font-size: 18pt;
-    text-align: center;
+  font-size: 18pt;
+  text-align: center;
 }
 
 .center-vertical-form {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .center-vertical-form::before {
-    content: '';
-    display: inline-block;  
-    vertical-align: middle;
-    height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
 }
 
 .center-vertical-form::after {
-    content: '';
-    display: inline-block;
-    width: 100%;
+  content: "";
+  display: inline-block;
+  width: 100%;
 }
 
 .form-right {
-    float: right;
+  float: right;
 }
 
 .main-photo {
-    max-width: 50%;
-    width: 500px;
+  max-width: 50%;
+  width: 500px;
 }
 
 .name-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .picture-upload-input-div {
-    padding-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .rounded-input {
-    border-radius: 5%;
-    margin-top: 1rem;
-    width: 50%;
+  border-radius: 5%;
+  margin-top: 1rem;
+  width: 50%;
 }
 
 .flex-form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .powerful-delete-btn {
-    margin-top: 10rem;
-    height: 3rem;
-    width: 10rem;
-    font-size: 14pt;
+  margin-top: 10rem;
+  height: 3rem;
+  width: 10rem;
+  font-size: 14pt;
 }
 
 .delete-profile-div {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 5rem;
 }
 
 .form-control-custom {
-    display: block;
-    /* width: 100%; */
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  display: block;
+  /* width: 100%; */
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
+hr {
+    margin: 0;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background-color: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background-color: #55acee;
+  color: white;
+}
+
+.fa-linkedin {
+  background-color: #0077b5;
+  color: white;
+}
+
+.fa-youtube {
+  background-color: #e62117;
+  color: white;
+}
+
+.footer-div-top {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon {
+    margin-bottom: 1rem;
+    border: 1pt solid black;
 }
