@@ -42,14 +42,15 @@ img {
 
 .skill-lists {
     display: flex;
-    justify-content: space-evenly;
-    width: 110%;
+    justify-content: space-between;
+    width: 80%;
     position: relative;
 }
 
 #add-skill-input, #add-desired-skill-input {
     position: absolute;
     top: 85%;
+    margin-top: 2rem;
 }
 
 .delete {
@@ -133,7 +134,8 @@ img {
 }
 
 .main-photo {
-    width: 50%;
+    max-width: 50%;
+    width: 500px;
 }
 
 .name-div {
@@ -167,4 +169,5 @@ img {
 .delete-profile-div {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
