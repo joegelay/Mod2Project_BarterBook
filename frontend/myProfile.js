@@ -162,6 +162,7 @@ function renderListItems(user) {
     });
 
     const addSkill = document.createElement('li')
+    addSkill.id = "add-skill-input"
     
     addSkill.innerHTML = `
     <form class="form-padding" method="POST" action="http://localhost:4000/skills">
@@ -172,6 +173,8 @@ function renderListItems(user) {
     skillList.appendChild(addSkill);
 
     const addDesiredSkill = document.createElement('li')
+    addDesiredSkill.id = "add-desired-skill-input"
+
           addDesiredSkill.innerHTML = `
           <form class="form-padding" method="POST" action="http://localhost:4000/skills">
             <input type="text" class="form-control add-skill-input" id="addDesiredSkillsInput" placeholder="Add desired skill..." name="name">

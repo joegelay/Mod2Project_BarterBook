@@ -42,8 +42,14 @@ img {
 
 .skill-lists {
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    justify-content: space-between;
+    width: 110%;
+    position: relative;
+}
+
+#add-skill-input, #add-desired-skill-input {
+    position: absolute;
+    top: 85%;
 }
 
 .delete {
