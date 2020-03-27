@@ -60,7 +60,7 @@ After you have started running the Frontend and the Backend, then you will navig
     - The user can delete their profile as well
         - Redirected to Landing page with a Toast message if the user deletes their profile
 
-## Video Demo
+### Video Demo
 
 [![Barterbook Walk-through Video](https://img.youtube.com/vi/258CrIi6kJg/0.jpg)](https://www.youtube.com/watch?v=258CrIi6kJg)
 
