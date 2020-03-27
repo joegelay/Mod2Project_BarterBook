@@ -42,7 +42,7 @@ img {
 
 .skill-lists {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 110%;
     position: relative;
 }
@@ -158,7 +158,7 @@ img {
 }
 
 .powerful-delete-btn {
-    margin-top: 3rem;
+    margin-top: 5rem;
     height: 5rem;
     width: 10rem;
     font-size: 14pt;
