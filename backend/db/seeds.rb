@@ -15,9 +15,11 @@ jack = User.create name: "Jack Perry", email: "jack.perry@gmail.com", password: 
 ahmed = User.create name: "Ahmed Gaber", email: "ahmedgaber@gmail.com", password: "ahmed", zip: "90210", bio: "I can teach code, need someone to walk my dog!", image_url: "https://i.ytimg.com/vi/cYNlJYQI3Uw/maxresdefault.jpg"
 couper = User.create name: "Josh Couper", email: "couper@gmail.com", password: "ahmed", zip: "23145", bio: "I play guitar, want to learn how to code.", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTbs9jHir0wMGl9zwmzaFCxA_knE64Gv1FNZhc3CAs8-g3be5Ps"
 damon = User.create name: "Damon Chivers", email: "chivers@gmail.com", password: "ahmed", zip: "23145", bio: "I paint and code, someone teach me woodworking!", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRs4iOx50CdY0rAu2c-Pl6Ue9bSyLeaRt9DqhC-MaIufLSESi8-"
-jesse = User.create name: "Jesse Pope", email: "pope@gmail.com", password: "ahmed", zip: "23145", bio: "I love to code, need help with painting!", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRux4NgFvBWerPXtBjD3WsRMzrWBYtSM_SE7UiGpXCh00mbMmo6"
+jared = User.create name: "Jared Stromberg", email: "stromber@gmail.com", password: "ahmed", zip: "23145", bio: "Juuuuuust Jared", image_url: "https://steemitimages.com/640x0/https://img.esteem.ws/lvifau2r7d.jpg"
 kyle = User.create name: "Kyle Coberly", email: "coberly@gmail.com", password: "ahmed", zip: "23145", bio: "Code master. Thought lord. Someone fix my toilet.", image_url: "https://www.malvernelibrary.org/wp-content/uploads/2012/06/Dog-Coding.jpg"
 kat = User.create name: "Kathy Scriver", email: "scriver@gmail.com", password: "ahmed", zip: "23145", bio: "I am an expert programmer, want to learn chess!", image_url: "https://cdn.theatlantic.com/thumbor/pN25nhF1hatn7QpckNtABKwzmoI=/0x61:1000x624/720x405/media/old_wire/img/upload/2013/03/18/happydog/original.jpg"
+jesse = User.create name: "Jesse Pope", email: "pope@gmail.com", password: "ahmed", zip: "23145", bio: "I love to code, need help with painting!", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRux4NgFvBWerPXtBjD3WsRMzrWBYtSM_SE7UiGpXCh00mbMmo6"
+brian = User.create name: "Brian Firooz", email: "firooz@gmail.com", password: "ahmed", zip: "23145", bio: "I want to learn to code!", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSRZX-XPZAkpOXR-czIiDgrC7ef5JerveXtt8Lw5-JZVsfWUIc0"
 mario = User.create name: "Mario Colombo", email: "mario@gmail.com", password: "ahmed", zip: "23145", bio: "It's a me, Mario! I am a plumber that needs help with English!", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTABhJQPFo0Jv4wAB3dulUow7jZHlNb5evPbX_mdFUn6Eq1fj2M"
 skylord = User.create name: "Skylord Perry", email: "skylord@bark.com", password: "ahmed", zip: "80206", bio: "I love walking other people's dogs, need to learn some spanish.", image_url: "https://lh3.googleusercontent.com/pJdk5AZiMgy2ONIhwfYML7Iqj-PBqRyQzwe6mmLUyAs2aE_v9jwczV45g8VizSwur0o6qWhR96CntIh8ZPNW22ITgA1mrSQQtqP95C4K9lJHGYvJNEr-gDfTVhRS-9GCz6jZMMmHpw=w699-h932-no"
 whiskey = User.create name: "Whiskey Thompson", email: "whiskey@gmail.com", password: "ahmed", zip: "68124", bio: "Really good at fixing cars, need help with piano!", image_url: "https://cbsnews1.cbsistatic.com/hub/i/2015/03/11/d896948f-947b-4ef6-99f0-3f39d49c74c7/doggy6.png"
@@ -66,6 +68,12 @@ UserSkill.create user: jesse, skill: painting, has_skill: false
 UserSkill.create user: damon, skill: code, has_skill: true 
 UserSkill.create user: damon, skill: painting, has_skill: true
 UserSkill.create user: damon, skill: woodworking, has_skill: false
+UserSkill.create user: jared, skill: code, has_skill: true
+UserSkill.create user: jared, skill: sewing, has_skill: false
+UserSkill.create user: brian, skill: english, has_skill: true
+UserSkill.create user: brian, skill: mechanic, has_skill: true
+UserSkill.create user: brian, skill: dog, has_skill: true
+UserSkill.create user: brian, skill: code, has_skill: false
 
 UserSkill.create user: skylord, skill: dog, has_skill:true
 UserSkill.create user: skylord, skill: spanish, has_skill: false
