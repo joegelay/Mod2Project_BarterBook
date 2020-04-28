@@ -32,7 +32,7 @@ After you have started running the Frontend and the Backend, then you will navig
 ### Website Pages
 
 - `http://localhost:3000/landingPage.html`
-    - This page shows a brief description of Barterbox and gives the user the ability to navigate to the Sign In page.
+    - This page shows a brief description of Barterbook and gives the user the ability to navigate to the Sign In page.
     - This page will pop up with a Toast message if the parameter `?reason=deleted_profile` is added
         - This parameter is added when a user deletes their profile
 
